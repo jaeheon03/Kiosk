@@ -1,0 +1,11 @@
+﻿<ul class="nav justify-content-center ">
+    <li class="nav-item">
+      <h1><a class="nav-link active" aria-current="page" href="{% url 'cafes:index' %}">맛있는카페</a></h1>
+    </li>
+</ul>
+<h1>Are you sure you want to delete "{{ object.name }}"?</h1>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Yes, delete</button>
+    <a href="{% url 'cafes:index' %}">Cancel</a>
+</form>

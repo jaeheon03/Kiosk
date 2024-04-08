@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Review</title>
+</head>
+<body>
+    <ul class="nav justify-content-center ">
+        <li class="nav-item">
+          <h1><a class="nav-link active" aria-current="page" href="{% url 'cafes:index' %}">맛있는카페</a></h1>
+        </li>
+    </ul>
+    <h1>Create Review</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
